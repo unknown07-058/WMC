@@ -1,0 +1,25 @@
+/* a) */
+article.testbereich section[data-topic^="css-adv"] {
+    border: 2px dashed red;
+}
+
+/* b) */
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a {
+    color: green;
+    font-weight: bold;
+    transition: color 1s;
+}
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a:hover {
+    color: red;
+}
+
+/* c) */
+table.preise tr:nth-child(3) { background: #fff4cc; }   /* Kopfzeile ist Zeile 1 */
+table.preise tr:last-child { border-top: 1px solid #888; }
+
+
+/* **d)** Das `data-topic`-Attribut ist bereits im HTML vorhanden und beschreibt
+die Sektion inhaltlich; ein Klassen-Selektor würde eine zweite, redundante
+Angabe im HTML verlangen. Der Attribut-Selektor trifft außerdem alle Sektionen
+mit diesem Präfix, auch wenn später eine weitere dazukommt.
+mit diesem Präfix, auch wenn später eine weitere dazukommt.*/
